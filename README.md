@@ -56,6 +56,23 @@ story.parameters = {
 };
 ```
 
+#### Vue router config
+
+You can adjust config values used in the set up of `VueRouter` by passing a `config` object in your parameters.
+
+```js
+export default {
+    parameters: {
+        router: {
+            config: {
+                mode: 'history',
+            },
+            routes: [],
+        },
+    },
+};
+```
+
 ### Testing
 
 When used with the [@netsells/vue-storybook-test-utils](https://github.com/netsells/vue-storybook-test-utils) package, routes will automatically be registered for your tests based on the routes provided in this parameter. This means you don't have to maintain routes for both your tests and stories, and reduces the time spent setting up said tests.
